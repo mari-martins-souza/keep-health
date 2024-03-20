@@ -1,0 +1,28 @@
+
+#titulo-cadastro {
+    margin-top: 50px;
+    color: white;
+}
+
+label {
+    color: white;
+}
+
+button {
+    background-color: black;
+    border-style: none;
+}
+
+button:hover {
+    background-color: white ;
+    color: black;
+}
+
+#cadastrar {
+    margin-top: 15px;
+}
+
+#voltar {
+    margin-top: 15px;
+    margin-left: 10px;
+}

@@ -1,0 +1,28 @@
+
+#titulo-login {
+    margin-top: 50px;
+    color: white;
+}
+
+label {
+    color: white;
+}
+
+button {
+    background-color: black;
+    border-style: none;
+}
+
+button:hover {
+    background-color: white ;
+    color: black;
+}
+
+#entrar {
+    margin-top: 15px;
+}
+
+#criar-cadastro {
+    margin-top: 15px;
+    margin-left: 10px;
+}
