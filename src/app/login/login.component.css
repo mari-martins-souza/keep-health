@@ -1,0 +1,43 @@
+
+#titulo-login {
+    margin-top: 50px;
+    color: white;
+}
+
+label {
+    color: white;
+}
+
+button {
+    background-color: black;
+    border-style: none;
+}
+
+button:hover {
+    background-color: white ;
+    color: black;
+}
+
+#esqueci-senha {
+    text-decoration: none;
+    color: white;
+}
+
+#esqueci-senha:hover {
+    color: black;
+}
+
+#entrar {
+    margin-top: 15px;
+}
+
+#criar-conta {
+    margin-left: 10px;
+    margin-top: 15px;
+    background-color: transparent;
+}
+
+#criar-conta:hover {
+    background-color: rgba(255, 255, 255, 0.534);
+}
+
