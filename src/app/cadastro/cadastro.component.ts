@@ -1,11 +1,12 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-cadastro',
   standalone: true,
-  imports: [RouterModule, ReactiveFormsModule],
+  imports: [RouterModule, ReactiveFormsModule, CommonModule],
   templateUrl: './cadastro.component.html',
   styleUrl: './cadastro.component.css'
 })
@@ -19,22 +20,24 @@ export class CadastroComponent {
   });
 
   cadastrar() {
-    if (this.cadastroForm.value.senha === this.cadastroForm.value.confirmarSenha) {
-      const usuario = {
-        email: this.cadastroForm.value.email,
-        senha: this.cadastroForm.value.senha
+    if (this.cadastroForm.valid) {
+      if (this.cadastroForm.value.senha === this.cadastroForm.value.confirmarSenha) {
+        let usuarios = [];
+        const usuariosSalvos = localStorage.getItem('usuariosSalvos');
+        if (usuariosSalvos !== null) {
+          usuarios = JSON.parse(usuariosSalvos);
+        }
+        const usuario = {
+          email: this.cadastroForm.value.email,
+          senha: this.cadastroForm.value.senha
+        }
+        usuarios.push(usuario);
+        localStorage.setItem('usuariosSalvos', JSON.stringify(usuarios));
+      } else {
+        window.alert('As senhas não são iguais. Tente novamente.')
       }
-
-      let usuarios = [];
-      const usuariosSalvos = localStorage.getItem('usuariosSalvos');
-      if (usuariosSalvos !== null) {
-        usuarios = JSON.parse(usuariosSalvos);
-      }
-
-      usuarios.push(usuario);
-      
-      localStorage.setItem('usuariosSalvos', JSON.stringify(usuarios));
+    } else {
+      window.alert('Preencha todos os campos corretamente.')
     }
   }
-}
-
+}  
