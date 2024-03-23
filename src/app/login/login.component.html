@@ -1,13 +1,13 @@
 <div class="container">
     <h2 id="titulo-login">Entrar</h2>
-    <form>
+    <form (submit)="logar()">
       <div class="form-group">
         <label for="email">Email:</label>
-        <input type="email" class="form-control" id="email" placeholder="Digite seu email" name="email" required>
+        <input type="email" class="form-control" id="email" placeholder="Digite seu email" name="email" [(ngModel)]="email" required>
       </div>
       <div class="form-group">
         <label for="senha">Senha:</label>
-        <input type="password" class="form-control" id="senha" placeholder="Digite sua senha" name="senha" required>
+        <input type="password" class="form-control" id="senha" placeholder="Digite sua senha" name="senha" [(ngModel)]="senha" required>
       </div>
       <a id="esqueci-senha" href="/esqueci-senha" class="d-block mt-2">Esqueci a senha</a>
       <button id="entrar" type="submit" class="btn btn-primary">Entrar</button>
