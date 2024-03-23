@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-cadastro',
@@ -19,6 +19,8 @@ export class CadastroComponent {
     confirmarSenha: new FormControl('', Validators.required),
   });
 
+  constructor(private router: Router) { }
+
   cadastrar() {
     if (this.cadastroForm.valid) {
       if (this.cadastroForm.value.senha === this.cadastroForm.value.confirmarSenha) {
@@ -33,6 +35,9 @@ export class CadastroComponent {
         }
         usuarios.push(usuario);
         localStorage.setItem('usuariosSalvos', JSON.stringify(usuarios));
+        window.alert('Cadastro efetuado com sucesso. Você já pode efetuar login.')
+        this.router.navigate(['/login']);
+        
       } else {
         window.alert('As senhas não são iguais. Tente novamente.')
       }
