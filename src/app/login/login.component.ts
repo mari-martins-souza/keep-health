@@ -18,9 +18,11 @@ export class LoginComponent {
   
   logar() {
     if (this.loginService.autenticarUsuario(this.nomeUsuario, this.senha)) {
+      localStorage.setItem('usuarioLogado', this.nomeUsuario);
       this.router.navigate(['/inicio']);
     } else {
       window.alert('Nome de usuário ou senha inválido.')
     }
   }
 }
+

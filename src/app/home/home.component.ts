@@ -8,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  nomeUsuario: string = '';
+
+  constructor() {}
+  
+  ngOnInit() {
+    this.nomeUsuario = localStorage.getItem('usuarioLogado') || '';
+  }
 
 }

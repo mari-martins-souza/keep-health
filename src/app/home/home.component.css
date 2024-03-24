@@ -1,0 +1,15 @@
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0; 
+    font-size: 2em;
+    text-align: center;
+    color: white;
+}
+
+span {
+    background-color: black;
+}
+
