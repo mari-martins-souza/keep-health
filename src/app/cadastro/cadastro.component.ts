@@ -17,6 +17,10 @@ export class CadastroComponent {
     dataNascimento: new FormControl('', Validators.required),
     senha: new FormControl('',Validators.required),
     confirmarSenha: new FormControl('', Validators.required),
+    peso: new FormControl('', Validators.required),
+    altura: new FormControl('', Validators.required),
+    localizacao: new FormControl('', Validators.required),
+    nomeUsuario: new FormControl('', Validators.required),
   });
 
   constructor(private router: Router) { }
@@ -30,8 +34,15 @@ export class CadastroComponent {
           usuarios = JSON.parse(usuariosSalvos);
         }
         const usuario = {
+          nome: this.cadastroForm.value.nome,
           email: this.cadastroForm.value.email,
-          senha: this.cadastroForm.value.senha
+          dataNascimento: this.cadastroForm.value.dataNascimento,
+          senha: this.cadastroForm.value.senha,
+          peso: this.cadastroForm.value.peso,
+          altura: this.cadastroForm.value.altura,
+          localizacao: this.cadastroForm.value.localizacao,
+          nomeUsuario: this.cadastroForm.value.nomeUsuario,
+          
         }
         usuarios.push(usuario);
         localStorage.setItem('usuariosSalvos', JSON.stringify(usuarios));

@@ -1,0 +1,30 @@
+.container-fluid {
+    background-color: rgb(0, 0, 0);
+}
+
+.nav-link {
+    font-size: 1.2em;
+    color: white
+}
+
+.nav-link:hover {
+    font-size: 1.2em;
+    color: #e22288;
+    /* font-weight: 600; */
+}
+
+.navbar {
+    padding: 0px;
+}
+
+
+/* tem uma seleção em volta do ícone que fica aparente quando é clicado no botão, deixei transparente porque essa seleção não fica legal */
+.navbar-toggler {
+    color: transparent;
+}
+
+/* não consegui apagar o contorno em volta do ícone do menu mobile, tentar novamente mais tarde, uma opção é colocar o ícone manualmente, não através do bootstrap */
+
+
+
+

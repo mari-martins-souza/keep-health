@@ -1,5 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
-
-body {
-    background-color: grey;
+html, body {
+    margin: 0;
+    background-image: linear-gradient(to right, #4f4c8b, #e22288);
 }

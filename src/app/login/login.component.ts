@@ -11,16 +11,16 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-  email!: string;
+  nomeUsuario!: string;
   senha!: string;
 
   constructor(private router: Router, private loginService: LoginService) { }
   
   logar() {
-    if (this.loginService.autenticarUsuario(this.email, this.senha)) {
-      this.router.navigate(['']);
+    if (this.loginService.autenticarUsuario(this.nomeUsuario, this.senha)) {
+      this.router.navigate(['/inicio']);
     } else {
-      window.alert('Email ou senha inválidos.')
+      window.alert('Nome de usuário ou senha inválido.')
     }
   }
 }
