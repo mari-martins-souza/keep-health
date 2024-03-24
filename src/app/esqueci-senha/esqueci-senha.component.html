@@ -1,0 +1,11 @@
+<div class="container">
+    <h2 id="titulo-recuperar-senha">Encontre seu e-mail</h2>
+    <form (submit)="recuperarSenha()">
+      <div class="form-group">
+        <label for="email">Digite o e-mail cadastrado:</label>
+        <input type="email" class="form-control" id="email" placeholder="Digite seu email" name="email" [(ngModel)]="email" required>
+      </div>
+      <button id="recuperar-senha" type="submit" class="btn btn-primary">Recuperar a senha</button>
+      <button id="voltar" type="button" class="btn btn-primary" [routerLink]="['/login']">Voltar</button>
+    </form>
+  </div>

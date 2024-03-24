@@ -1,0 +1,32 @@
+#titulo-recuperar-senha {
+    margin-top: 50px;
+    color: white;
+}
+
+label {
+    color: white;
+}
+
+button {
+    background-color: black;
+    border-style: none;
+}
+
+button:hover {
+    background-color: white ;
+    color: black;
+}
+
+#voltar {
+    margin-top: 15px;
+    margin-left: 10px;
+    background-color: transparent;
+}
+
+#voltar:hover {
+    background-color: rgba(255, 255, 255, 0.534);
+}
+
+#recuperar-senha {
+    margin-top: 15px;
+}
