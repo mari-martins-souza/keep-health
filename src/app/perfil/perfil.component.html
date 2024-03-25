@@ -1,1 +1,9 @@
-<p>perfil works!</p>
+<div *ngIf="usuarioLogado">
+    <h2>{{usuarioLogado.nomeUsuario}}</h2>
+    <p>Nome: {{usuarioLogado.nome}}</p>
+    <p>e-mail: {{usuarioLogado.email}}</p>
+    <p>Peso: {{usuarioLogado.peso}}</p>
+    <p>Altura: {{usuarioLogado.altura}}</p>
+    <p>Data de Nascimento: {{usuarioLogado.dataNascimento}}</p>
+    <p>Cep: {{usuarioLogado.localizacao}}</p>
+</div>
