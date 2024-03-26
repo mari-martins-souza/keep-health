@@ -47,7 +47,7 @@ export class CadastroComponent {
         usuarios.push(usuario);
         localStorage.setItem('usuariosSalvos', JSON.stringify(usuarios));
         window.alert('Cadastro efetuado com sucesso. Você já pode efetuar login.')
-        this.router.navigate(['/login']);
+        this.router.navigate(['']);
         
       } else {
         window.alert('As senhas não são iguais. Tente novamente.')

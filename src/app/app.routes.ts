@@ -11,13 +11,15 @@ import { DietasDetalheComponent } from './dietas-detalhe/dietas-detalhe.componen
 
 
 export const routes: Routes = [
-    {   path: 'cadastro',
-        component: CadastroComponent
-    },
     {
-        path: 'login',
+        path: '',
         component: LoginComponent
     },
+    
+    {   
+        path: 'cadastro',
+        component: CadastroComponent
+    },  
     {
         path: 'inicio',
         component: HomeComponent

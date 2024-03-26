@@ -38,4 +38,29 @@ button:hover {
 
 .container {
     margin-bottom: 35px;
+    width: 35%;
+}
+
+@media only screen and (max-width: 900px) {
+    .container {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .container {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .container {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .container {
+        width: 85%;
+    }
 }
