@@ -15,7 +15,7 @@ export class PerfilComponent implements OnInit {
 
   ngOnInit(): void {
     const nomeUsuario = localStorage.getItem('usuarioLogado');
-    const usuariosSalvos = JSON.parse(localStorage.getItem('UsuariosSalvos') || '[]');
+    const usuariosSalvos = JSON.parse(localStorage.getItem('usuariosSalvos') || '[]');
 
     this.usuarioLogado = usuariosSalvos.find((usuario: any) => usuario.nomeUsuario === nomeUsuario);
     
