@@ -9,7 +9,7 @@ import { RouterModule, Router } from '@angular/router';
   standalone: true,
   imports: [FormsModule, RouterModule],
   templateUrl: './esqueci-senha.component.html',
-  styleUrl: './esqueci-senha.component.css'
+  styleUrl: './esqueci-senha.component.scss'
 })
 export class EsqueciSenhaComponent {
   email!: string;

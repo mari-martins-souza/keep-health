@@ -1,0 +1,7 @@
+$colorHoverText: rgb(245, 209, 47);
+$colorTituloForms: rgb(255, 255, 255);
+$pesoFont: 400;
+
+@mixin titulos($pesoFont) {
+    font-weight: $pesoFont;
+}

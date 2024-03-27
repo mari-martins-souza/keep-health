@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './dietas.component.html',
-  styleUrl: './dietas.component.css'
+  styleUrl: './dietas.component.scss'
 })
 export class DietasComponent implements OnInit {
     alimentos = [

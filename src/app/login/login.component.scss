@@ -1,7 +1,7 @@
+@import '../../assets/styles/variables';
 
 #titulo-login {
-    margin-top: 50px;
-    color: white;
+    color: $colorTituloForms;
 }
 
 label {
@@ -24,7 +24,7 @@ button:hover {
 }
 
 #esqueci-senha:hover {
-    color: black;
+    color: $colorHoverText;
 }
 
 #entrar {
@@ -42,7 +42,13 @@ button:hover {
 }
 
 .container {
+    margin-bottom: 35px;
+    margin-top: 50px;
     width: 25%;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.281);
 }
 
 @media only screen and (max-width: 1200px) {

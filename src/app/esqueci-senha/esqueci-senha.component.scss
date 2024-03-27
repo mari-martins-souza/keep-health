@@ -1,6 +1,8 @@
+@import '../../assets/styles/variables';
+
 #titulo-recuperar-senha {
     margin-top: 50px;
-    color: white;
+    color: $colorTituloForms;
 }
 
 label {

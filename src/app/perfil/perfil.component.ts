@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './perfil.component.html',
-  styleUrl: './perfil.component.css'
+  styleUrl: './perfil.component.scss'
 })
 export class PerfilComponent implements OnInit {
   usuarioLogado: any;

@@ -1,7 +1,8 @@
+@import '../../assets/styles/variables';
 
 #titulo-cadastro {
-    margin-top: 50px;
-    color: white;
+    color: rgb(255, 255, 255);
+    // @include titulos($pesoFont);
 }
 
 label {
@@ -38,7 +39,12 @@ button:hover {
 
 .container {
     margin-bottom: 35px;
+    margin-top: 50px;
     width: 35%;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.281);
 }
 
 @media only screen and (max-width: 900px) {
