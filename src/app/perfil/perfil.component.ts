@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ConversorAlturaPipe } from '../pipes/conversor-altura.pipe';
+import { ConversorIdadePipe } from '../pipes/conversor-idade.pipe';
 
 @Component({
   selector: 'app-perfil',
   standalone: true,
-  imports: [CommonModule, ConversorAlturaPipe],
+  imports: [CommonModule, ConversorAlturaPipe, ConversorIdadePipe],
   templateUrl: './perfil.component.html',
   styleUrl: './perfil.component.scss'
 })

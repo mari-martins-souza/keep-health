@@ -1,9 +1,11 @@
-<div *ngIf="usuarioLogado">
-    <h2>{{usuarioLogado.nomeUsuario}}</h2>
-    <p>Nome: {{usuarioLogado.nome}}</p>
-    <p>e-mail: {{usuarioLogado.email}}</p>
-    <p>Peso: {{usuarioLogado.peso}}</p>
-    <p>Altura: {{usuarioLogado.altura | conversorAltura}}</p>
-    <p>Data de Nascimento: {{usuarioLogado.dataNascimento}}</p>
-    <p>Cep: {{usuarioLogado.localizacao}}</p>
+<div class="container" *ngIf="usuarioLogado">
+        <p><strong>Nome de usuário: </strong>{{usuarioLogado.nomeUsuario}}</p>
+        <p><strong>Nome: </strong> {{usuarioLogado.nome}}</p>
+        <p><strong>e-mail: </strong> {{usuarioLogado.email}}</p>
+        <p><strong>Peso: </strong>{{usuarioLogado.peso}}</p>
+        <p><strong>Altura: </strong>{{usuarioLogado.altura | conversorAltura}}</p>
+        <p><strong>Idade: </strong>{{usuarioLogado.dataNascimento | conversorIdade}}</p>
+        <p><strong>Cep: </strong>{{usuarioLogado.localizacao}}</p>  
+        <button id="cep">Pesquisar Cep</button> 
 </div>
+ 
