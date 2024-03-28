@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { LoginService } from '../services/login.service';
 import { FormsModule } from '@angular/forms';
+import { NavbarService } from '../services/navbar.service';
 
 @Component({
   selector: 'app-login',
@@ -10,12 +11,20 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
   nomeUsuario!: string;
   senha!: string;
 
-  constructor(private router: Router, private loginService: LoginService) { }
+  constructor(private router: Router, private loginService: LoginService, private navbarService: NavbarService) { }
   
+  ngOnInit() {
+    this.navbarService.toggleNavbar(false);
+  }
+
+  ngOnDestroy() {
+    this.navbarService.toggleNavbar(true);
+  }
+
   logar() {
     if (this.loginService.autenticarUsuario(this.nomeUsuario, this.senha)) {
       localStorage.setItem('usuarioLogado', this.nomeUsuario);
