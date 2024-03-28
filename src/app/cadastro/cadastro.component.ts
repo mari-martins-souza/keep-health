@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
+import { NavbarService } from '../services/navbar.service';
 
 @Component({
   selector: 'app-cadastro',
@@ -10,7 +11,7 @@ import { Router, RouterModule } from '@angular/router';
   templateUrl: './cadastro.component.html',
   styleUrl: './cadastro.component.scss'
 })
-export class CadastroComponent {
+export class CadastroComponent implements OnInit {
   cadastroForm = new FormGroup({
     nome: new FormControl('', Validators.required),
     email: new FormControl('', [Validators.required, Validators.email]),
@@ -23,7 +24,17 @@ export class CadastroComponent {
     nomeUsuario: new FormControl('', Validators.required),
   });
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private navbarService: NavbarService) { }
+
+  ngOnInit() {
+    setTimeout(() => {
+    this.navbarService.toggleNavbar(false);
+    });
+  }
+
+  ngOnDestroy() {
+    this.navbarService.toggleNavbar(true);
+  }
 
   cadastrar() {
     if (this.cadastroForm.valid) {

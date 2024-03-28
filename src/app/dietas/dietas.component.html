@@ -1,6 +1,15 @@
-<div *ngFor="let alimento of alimentos">
+<!-- <div>
+  <div *ngFor="let alimento of alimentos">
     <h2>{{alimento.name}}</h2>
     <p>{{alimento.description}}</p>
+    <img [src]='alimento.imageLink'>
     <p>Calorias: {{alimento.qttCalories}} por 100gr/ml</p>
     <p>Dias por semana: {{alimento.qttDaysFeed}}</p>
   </div>
+</div>   -->
+
+
+  <div *ngFor="let alimento of alimentos">
+    <app-card [item] ="alimento"></app-card>
+  </div>
+
