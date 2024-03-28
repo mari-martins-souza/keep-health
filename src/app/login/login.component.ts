@@ -18,7 +18,9 @@ export class LoginComponent implements OnInit {
   constructor(private router: Router, private loginService: LoginService, private navbarService: NavbarService) { }
   
   ngOnInit() {
+    setTimeout(() => {
     this.navbarService.toggleNavbar(false);
+    });
   }
 
   ngOnDestroy() {
@@ -30,7 +32,7 @@ export class LoginComponent implements OnInit {
       localStorage.setItem('usuarioLogado', this.nomeUsuario);
       this.router.navigate(['/inicio']);
     } else {
-      window.alert('Nome de usuário ou senha inválido.')
+      window.alert('Senha ou nome de usuário inválidos.')
     }
   }
 }

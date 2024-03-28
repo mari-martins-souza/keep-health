@@ -18,7 +18,9 @@ export class EsqueciSenhaComponent implements OnInit {
     constructor(private ConsultarUsuarioService: ConsultarUsuarioService, private ResetSenhaService: ResetSenhaService, private router: Router, private navbarService: NavbarService) { }
 
     ngOnInit() {
+      setTimeout(() => {
       this.navbarService.toggleNavbar(false);
+      });
     }
   
     ngOnDestroy() {
