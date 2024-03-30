@@ -1,10 +1,46 @@
-.card-alimentos {
-    // border: 3px solid rgb(255, 255, 255);
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
+.card-img-top {
+    width: 300px;
+    border-radius: 50%;
+    padding: 20px;
 }
+
+@media only screen and (max-width: 575px) {
+    .card-img-top {
+        width: 250px;
+    }
+}
+
+.card-body {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.card-title {
+   margin: auto;
+//    border: 2px solid black;
+}
+
+.card-title:hover {
+    color: #ffffff;
+ }
+
+.card-text {
+    text-align: center;
+    // border: 2px solid black;
+}
+
+.card {
+    margin: auto;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.342);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 250px;
+    height: 500px;
+}
+
+
 
