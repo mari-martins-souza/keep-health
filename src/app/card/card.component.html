@@ -1,5 +1,9 @@
-<div class="card-alimentos">
-    <img [src]="item?.imageLink" alt="">
-    <span>{{ item?.name }}</span>
-    <span>{{ item?.description }}</span>
+<div class="card-group">
+    <div class="card">
+        <img [src]="item?.imageLink" alt="" class="card-img-top">
+        <div class="card-body">
+            <h5 class="card-title">{{ item?.name }}</h5>
+            <p class="card-text">{{ item?.description }}</p> 
+        </div>
+    </div>
 </div>
