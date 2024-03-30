@@ -6,6 +6,10 @@
         <p><strong>Altura: </strong>{{usuarioLogado.altura | conversorAltura}}</p>
         <p><strong>Idade: </strong>{{usuarioLogado.dataNascimento | conversorIdade}}</p>
         <p><strong>Cep: </strong>{{usuarioLogado.localizacao}}</p>  
-        <button id="cep">Pesquisar Cep</button> 
+        <button id="cep" (click)="pesquisarCep()" class="btn btn-primary">Pesquisar Endereço</button>
+        <div id="endereco-consultado">
+                <p>{{enderecoRetornado}}</p>
+        </div>
 </div>
- 
+
+
