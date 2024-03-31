@@ -1,10 +1,14 @@
 <div id="topo">
   <h2>Alimentos que auxiliam no emagrecimento</h2>
-  <p>Inclua esses alimentos em sua dieta conforme indicado</p>
+  <div id="pesquisa">
+    <input type="text" [(ngModel)]="textoPesquisa" class="form-control">
+    <button (click)="pesquisar()" class="btn btn-primary" id="btn-pesquisar">Pesquisar</button>
+    <button (click)="limparFiltro()" class="btn btn-primary" id="btn-limpar">Limpar Filtro</button>
+</div>
 </div>  
 <div class="card-alimentos">
   <div class="row">
-    <div *ngFor="let alimento of alimentos" class="col-lg-4 col-md-6">
+    <div *ngFor="let alimento of alimentosFiltro" class="col-lg-4 col-md-6">
       <app-card [item] ="alimento"></app-card>
     </div>
   </div>

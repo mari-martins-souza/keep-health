@@ -1,15 +1,23 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { CardComponent } from '../card/card.component';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-dietas',
   standalone: true,
-  imports: [CommonModule, CardComponent],
+  imports: [CommonModule, CardComponent, FormsModule],
   templateUrl: './dietas.component.html',
   styleUrl: './dietas.component.scss'
 })
 export class DietasComponent implements OnInit {
+  textoPesquisa: string | undefined;
+
+  pesquisar() {
+    let textoPesquisa = this.textoPesquisa || '';
+    this.alimentosFiltro = this.alimentos.filter(item => item.name.toLowerCase().includes(textoPesquisa.toLowerCase()));
+  }
+
     alimentos = [
     {
       id: 1,
@@ -91,7 +99,31 @@ export class DietasComponent implements OnInit {
       qttDaysFeed: 7,
       imageLink: 'assets/imagens/maca.jpg',
     },
+    {
+      id: 11,
+      name: 'Canela',
+      description: 'A canela possui propriedades anti-inflamatórias, antioxidantes e antimicrobianas. Ajuda a reduzir os níveis de açúcar no sangue e tem um efeito termogênico.',
+      qttCalories: 261,
+      qttDaysFeed: 7,
+      imageLink: 'assets/imagens/canela.jpg',
+    },
+    {
+      id: 12,
+      name: 'Berinjela',
+      description: 'A berinjela é um alimento de baixa caloria. Rica em água e fibras, o que ajuda a aumentar a sensação de saciedade e reduzir a ingestão geral de calorias.',
+      qttCalories: 25,
+      qttDaysFeed: 7,
+      imageLink: 'assets/imagens/berinjela.jpg',
+    }
+
   ];
+
+  alimentosFiltro = this.alimentos;
+
+  limparFiltro() {
+    this.alimentosFiltro = this.alimentos;
+  }
+
   constructor() {}
 
   ngOnInit(): void {

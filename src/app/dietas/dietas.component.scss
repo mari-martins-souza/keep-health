@@ -1,3 +1,40 @@
+#pesquisa {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.form-control {
+    width: 205px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+#btn-pesquisar {
+    margin-left: 10px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: black;
+    border-style: none;
+}
+
+button:hover {
+    background-color: white ;
+    color: black;
+}
+
+#btn-limpar {
+    background-color: transparent;
+    margin-bottom: 10px;
+}
+
+#btn-limpar:hover {
+    background-color: rgba(255, 255, 255, 0.534);
+}
+
 #topo {
     text-align: center;
     margin-top: 50px;
@@ -12,6 +49,10 @@
     margin-right: 20px;
     max-width: 1200px;    
     margin: auto;
+}
+
+h2 {
+    margin-bottom: 25px;
 }
 
 @media only screen and (min-width: 767px) and (max-width: 990px) {
