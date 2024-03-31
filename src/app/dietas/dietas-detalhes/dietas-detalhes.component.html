@@ -1,0 +1,12 @@
+<div class="container">  
+  <div *ngIf="alimento">
+      <h2>{{ alimento.name }}</h2>
+      <img [src]="alimento.imageLink" alt="{{ alimento.name }}">
+    <div id="textos"> 
+      <p>{{ alimento.description }}</p>
+      <p>Calorias: {{ alimento.qttCalories }} por 100gr/ml</p>
+      <p>Quantidade de dias que pode comer por semana: {{ alimento.qttDaysFeed }}</p>
+    </div>
+    </div>
+</div>    
+    

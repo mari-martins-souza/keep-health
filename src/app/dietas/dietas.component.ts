@@ -2,11 +2,13 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { CardComponent } from '../card/card.component';
 import { FormsModule } from '@angular/forms';
+import { DietasDetalhesComponent } from './dietas-detalhes/dietas-detalhes.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-dietas',
   standalone: true,
-  imports: [CommonModule, CardComponent, FormsModule],
+  imports: [CommonModule, CardComponent, FormsModule, DietasDetalhesComponent, RouterModule],
   templateUrl: './dietas.component.html',
   styleUrl: './dietas.component.scss'
 })

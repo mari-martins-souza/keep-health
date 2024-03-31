@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-card',
@@ -9,5 +10,11 @@ import { Component, Input } from '@angular/core';
   styleUrl: './card.component.scss'
 })
 export class CardComponent {
-  @Input() item: { imageLink: string; name: string; description: string; } | undefined;
+  @Input() item: any;
+
+  constructor(private router: Router) { }
+
+  redirecionarParaDetalhes(id: number) {
+    this.router.navigate(['/dietas/detalhes', id]);
+  }
 }
