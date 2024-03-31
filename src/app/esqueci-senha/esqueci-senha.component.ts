@@ -31,7 +31,7 @@ export class EsqueciSenhaComponent implements OnInit {
       if (this.ConsultarUsuarioService.validarUsuario(this.email)) {
         this.ResetSenhaService.atualizarSenha(this.email, 'a1b2c4d4');
         window.alert("Sua senha foi resetada. Utilize a nova senha: a1b2c4d4");
-        this.router.navigate(['/login']);
+        this.router.navigate(['']);
     } else {
       window.alert("Usuário não encontrado. Informe o e-mail utilizado no cadastro.")
     }
