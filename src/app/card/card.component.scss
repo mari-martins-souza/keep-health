@@ -21,10 +21,6 @@
 //    border: 2px solid black;
 }
 
-.card-title:hover {
-    color: #ffffff;
- }
-
 .card-text {
     text-align: center;
     // border: 2px solid black;
@@ -40,6 +36,11 @@
     align-items: center;
     width: 250px;
     height: 500px;
+    cursor: pointer;
+}
+
+.card:hover {
+    background-color: white;
 }
 
 
