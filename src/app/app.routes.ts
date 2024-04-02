@@ -6,6 +6,7 @@ import { EsqueciSenhaComponent } from './esqueci-senha/esqueci-senha.component';
 import { DietasComponent } from './dietas/dietas.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { DietasDetalhesComponent } from './dietas/dietas-detalhes/dietas-detalhes.component';
+import { ExerciciosComponent } from './exercicios/exercicios.component';
 
 export const routes: Routes = [
     {
@@ -39,6 +40,10 @@ export const routes: Routes = [
                 path: 'detalhes/:id', component: DietasDetalhesComponent 
             },
             ] 
+    },
+    {
+        path: 'exercicios',
+        component: ExerciciosComponent
     },
 
 ];

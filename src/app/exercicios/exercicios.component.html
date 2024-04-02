@@ -1,0 +1,6 @@
+<p-button (click)="showDialog()" icon="pi pi-external-link" label="Show">Cidade</p-button>
+<p-dialog header="Header" [(visible)]="visible" [style]="{ width: '50vw' }">
+    <div class="flex py-2 justify-content-center">
+        <p-dropdown appendTo="body" [options]="cities" [(ngModel)]="selectedCity" placeholder="Select a City" optionLabel="name"></p-dropdown>
+    </div>
+</p-dialog>
