@@ -1,4 +1,5 @@
 
+<h2>Registro de atividades físicas</h2>
 <p-button (click)="showDialog()" icon="pi pi-external-link" label="Nova atividade"></p-button>
 <p-dialog header="Registro de atividade física" [(visible)]="visible" [breakpoints]="{ '960px': '75vw' }" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false">
 
@@ -10,7 +11,7 @@
                 <option>Natação</option>
                 <option>Dança</option>
                 <option>Ciclismo</option>
-                <option>Surfe</option>
+                <option>Surf</option>
                 <option>Musculação</option>
             </select>
         <div>
@@ -30,3 +31,12 @@
         </div>
     </form>
 </p-dialog>
+
+<div class="container-atividades" *ngFor="let atividade of listaAtividades; let i = index">
+    <img [src]="'../../../assets/imagens/esportes/' + atividade.atividade + '.jpg'" width="200px">
+    <p> {{atividade.atividade}} </p>
+    <p> {{atividade.data}} </p>
+    <p> {{atividade.distancia}} </p>
+    <p> {{atividade.duracao}} </p>
+    <button (click)="removerAtividade(i)">Excluir</button>
+</div>

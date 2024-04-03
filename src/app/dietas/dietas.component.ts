@@ -28,6 +28,7 @@ export class DietasComponent implements OnInit {
       qttCalories: 25,
       qttDaysFeed: 7,
       imageLink: 'assets/imagens/couve-flor.jpg',
+      type: 'alimento'
     },
     {
       id: 2,
@@ -36,6 +37,7 @@ export class DietasComponent implements OnInit {
       qttCalories: 1, 
       qttDaysFeed: 7,
       imageLink: 'assets/imagens/cha-verde.jpg',
+      type: 'alimento'
     },
     {
       id: 3,
@@ -44,6 +46,7 @@ export class DietasComponent implements OnInit {
       qttCalories: 112,
       qttDaysFeed: 7,
       imageLink: 'assets/imagens/arroz-integral.jpg',
+      type: 'alimento'
     },
     {
       id: 4,
@@ -52,6 +55,7 @@ export class DietasComponent implements OnInit {
       qttCalories: 9, 
       qttDaysFeed: 7,
       imageLink: 'assets/imagens/batata-konjac.jpg',
+      type: 'alimento'
     },
     {
       id: 5,
@@ -60,6 +64,7 @@ export class DietasComponent implements OnInit {
       qttCalories: 884,
       qttDaysFeed: 7,
       imageLink: 'assets/imagens/azeite.jpg',
+      type: 'alimento'
     },
     {
       id: 6,
@@ -68,6 +73,7 @@ export class DietasComponent implements OnInit {
       qttCalories: 20, 
       qttDaysFeed: 7,
       imageLink: 'assets/imagens/folhas-verdes.jpg',
+      type: 'alimento'
     },
     {
       id: 7,
@@ -76,6 +82,7 @@ export class DietasComponent implements OnInit {
       qttCalories: 389,
       qttDaysFeed: 7,
       imageLink: 'assets/imagens/aveia.jpg',
+      type: 'alimento'
     },
     {
       id: 8,
@@ -84,6 +91,7 @@ export class DietasComponent implements OnInit {
       qttCalories: 108, 
       qttDaysFeed: 7,
       imageLink: 'assets/imagens/feijao.jpg',
+      type: 'alimento'
     },
     {
       id: 9,
@@ -92,6 +100,7 @@ export class DietasComponent implements OnInit {
       qttCalories: 25,
       qttDaysFeed: 7,
       imageLink: 'assets/imagens/vinagre-maca.jpg',
+      type: 'alimento'
     },
     {
       id: 10,
@@ -100,6 +109,7 @@ export class DietasComponent implements OnInit {
       qttCalories: 52,
       qttDaysFeed: 7,
       imageLink: 'assets/imagens/maca.jpg',
+      type: 'alimento'
     },
     {
       id: 11,
@@ -108,6 +118,7 @@ export class DietasComponent implements OnInit {
       qttCalories: 261,
       qttDaysFeed: 7,
       imageLink: 'assets/imagens/canela.jpg',
+      type: 'alimento'
     },
     {
       id: 12,
@@ -116,6 +127,7 @@ export class DietasComponent implements OnInit {
       qttCalories: 25,
       qttDaysFeed: 7,
       imageLink: 'assets/imagens/berinjela.jpg',
+      type: 'alimento'
     }
 
   ];

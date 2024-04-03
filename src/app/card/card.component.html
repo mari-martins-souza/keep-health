@@ -1,9 +1,9 @@
 <div class="card-group">
-    <div class="card" (click)="redirecionarParaDetalhes(item.id)">
-        <img [src]="item?.imageLink" alt="" class="card-img-top">
+    <div *ngIf="item?.type === 'alimento'" class="card" (click)="redirecionarParaDetalhes(item.id)">
+        <img *ngIf="item?.type === 'alimento'" [src]="item?.imageLink" alt="" class="card-img-top">
         <div class="card-body">
-            <h5 class="card-title">{{ item?.name }}</h5>
-            <p class="card-text">{{ item?.description }}</p> 
+            <h5 *ngIf="item?.type === 'alimento'" class="card-title">{{ item?.name }}</h5>
+            <p *ngIf="item?.type === 'alimento'"class="card-text">{{ item?.description }}</p> 
         </div>
     </div>
 </div>
