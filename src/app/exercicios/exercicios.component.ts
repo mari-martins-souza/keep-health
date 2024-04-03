@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { DialogModule } from 'primeng/dialog';
@@ -12,12 +12,12 @@ import { DropdownModule } from 'primeng/dropdown';
   styleUrl: './exercicios.component.scss'
 })
 
-export class ExerciciosComponent {
+export class ExerciciosComponent implements OnInit {
   visible: boolean = false;
+  usuarioLogado!: string;
 
   showDialog() {
     this.visible = true;
-  
   }
 
   novaAtividadeForm = new FormGroup({
@@ -27,25 +27,33 @@ export class ExerciciosComponent {
     duracao:new FormControl(''),
   });
 
+  ngOnInit() {
+    this.usuarioLogado = localStorage.getItem('usuarioLogado') || '';
+  }
 
   incluirAtividade() {
-    const formAtividade = {
-      atividade: this.novaAtividadeForm.value.atividade,
-      data: this.novaAtividadeForm.value.data,
-      distancia: this.novaAtividadeForm.value.distancia,
-      duracao: this.novaAtividadeForm.value.duracao,
-    }
       this.salvarAtividadeLocalStorage();
+      this.visible = false;
   }
 
   salvarAtividadeLocalStorage() {
+        let atividades = [];
+
+        const atividadesSalvas = localStorage.getItem('atividadesSalvas-' + this.usuarioLogado);
+
+        if (atividadesSalvas !== null) {
+          atividades = JSON.parse(atividadesSalvas);
+        }
+
         const atividade = {
           atividade: this.novaAtividadeForm.value.atividade,
           data: this.novaAtividadeForm.value.data,
           distancia: this.novaAtividadeForm.value.distancia,
           duracao: this.novaAtividadeForm.value.duracao,
         };
-        localStorage.setItem('atividades', JSON.stringify(atividade));
+
+        atividades.push(atividade);
+        localStorage.setItem('atividadesSalvas-' + this.usuarioLogado, JSON.stringify(atividades));
   }
 
 }
@@ -53,33 +61,3 @@ export class ExerciciosComponent {
 
 
 
-
-//   @ViewChild('listaExercicios') listaExercicios!: ElementRef;
-//   @ViewChild('dataAtividade') dataAtividadeInput!: ElementRef;
-//   @ViewChild('distancia') distanciaInput!: ElementRef;
-//   @ViewChild('duracao') duracaoInput!: ElementRef;
-
-//   incluirAtividade() {
-//     this.modalidade = this.listaExercicios.nativeElement.value;
-//     this.dataAtividade = this.dataAtividadeInput.nativeElement.value;
-//     this.distancia = this.distanciaInput.nativeElement.valueAsNumber;
-//     this.duracao = this.duracaoInput.nativeElement.valueAsNumber;
-
-//     this.salvarAtividadeLocalStorage();
-//   }
-
-//   salvarAtividadeLocalStorage() {
-//     const atividade = {
-//       modalidade: this.modalidade,
-//       dataAtividade: this.dataAtividade,
-//       distancia: this.distancia,
-//       duracao: this.duracao,
-//     };
-
-//     localStorage.setItem('atividades', JSON.stringify(atividade));
-//   }
-
-//   showDialog() {
-//       this.visible = true;
-//   }
-// }
