@@ -12,21 +12,9 @@ import { DropdownModule } from 'primeng/dropdown';
   styleUrl: './exercicios.component.scss'
 })
 export class ExerciciosComponent {
-  cities: any[];
-  selectedCity: any;
   visible: boolean = false;
-
-  constructor() {
-    this.cities = [
-      {name: 'New York', code: 'NY'},
-      {name: 'Rome', code: 'RM'},
-      {name: 'London', code: 'LDN'},
-      {name: 'Istanbul', code: 'IST'},
-      {name: 'Paris', code: 'PRS'}
-    ];
-  }
-
+  
   showDialog() {
-    this.visible = true;
+      this.visible = true;
   }
 }

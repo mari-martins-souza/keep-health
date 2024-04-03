@@ -1,6 +1,32 @@
-<p-button (click)="showDialog()" icon="pi pi-external-link" label="Show">Cidade</p-button>
-<p-dialog header="Header" [(visible)]="visible" [style]="{ width: '50vw' }">
-    <div class="flex py-2 justify-content-center">
-        <p-dropdown appendTo="body" [options]="cities" [(ngModel)]="selectedCity" placeholder="Select a City" optionLabel="name"></p-dropdown>
-    </div>
-</p-dialog>
+
+    <p-button (click)="showDialog()" icon="pi pi-external-link" label="Nova atividade"></p-button>
+    <p-dialog header="Registro de atividade física" [(visible)]="visible" [breakpoints]="{ '960px': '75vw' }" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false">
+
+        <div id="nova-atividade">
+            <label for="lista-exercicios">Escolha a modalidade:</label>
+            <select class="form-select" aria-label="Default select example" id="lista-exercicios">
+                <option>Corrida</option>
+                <option>Caminhada</option>
+                <option>Natação</option>
+                <option>Dança</option>
+                <option>Ciclismo</option>
+                <option>Surfe</option>
+                <option>Musculação</option>
+            </select>
+        </div>
+        <div>
+            <label for="data-atividade">Data em que foi realizada:</label>
+            <input type="date" id="data-atividade" class="form-control">
+        </div>
+        <div>
+            <label for="distancia">Distância (se aplicável):</label>
+            <input type="number" class="form-control" id="distancia" placeholder="em km">
+        </div>
+        <div>
+            <label for="duracao">Duração da atividade (tempo):</label>
+            <input type="number" class="form-control" id="duracao" placeholder="em minutos">
+        </div>
+
+        <button id="incluir-atividade" type="submit" class="btn btn-primary">Registrar atividade</button>
+
+    </p-dialog>
