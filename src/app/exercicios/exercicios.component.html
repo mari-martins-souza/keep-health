@@ -1,10 +1,10 @@
 
-    <p-button (click)="showDialog()" icon="pi pi-external-link" label="Nova atividade"></p-button>
-    <p-dialog header="Registro de atividade física" [(visible)]="visible" [breakpoints]="{ '960px': '75vw' }" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false">
+<p-button (click)="showDialog()" icon="pi pi-external-link" label="Nova atividade"></p-button>
+<p-dialog header="Registro de atividade física" [(visible)]="visible" [breakpoints]="{ '960px': '75vw' }" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false">
 
-        <div id="nova-atividade">
+    <form [formGroup]="novaAtividadeForm" (ngSubmit)="incluirAtividade()">    
             <label for="lista-exercicios">Escolha a modalidade:</label>
-            <select #listaExercicios class="form-select" aria-label="Default select example" id="lista-exercicios">
+            <select class="form-select" aria-label="Default select example" id="lista-exercicios" formControlName="atividade">
                 <option>Corrida</option>
                 <option>Caminhada</option>
                 <option>Natação</option>
@@ -13,22 +13,20 @@
                 <option>Surfe</option>
                 <option>Musculação</option>
             </select>
-        </div>
         <div>
             <label for="data-atividade">Data em que foi realizada:</label>
-            <input #dataAtividadeInput type="date" id="data-atividade" class="form-control">
+            <input type="date" id="data-atividade" class="form-control" formControlName="data">
         </div>
         <div>
             <label for="distancia">Distância (se aplicável):</label>
-            <input type="number" #distanciaInput class="form-control" id="distancia" placeholder="em km">
+            <input type="number" class="form-control" id="distancia" placeholder="em km" formControlName="distancia">
         </div>
         <div>
             <label for="duracao">Duração da atividade (tempo):</label>
-            <input type="number" #duracaoInput class="form-control" id="duracao" placeholder="em minutos">
+            <input type="number" class="form-control" id="duracao" placeholder="em minutos" formControlName="duracao">
         </div>
-    
-    <div>
-        <button (click)="incluirAtividade()" id="incluir-atividade" type="submit" class="btn btn-primary">Registrar atividade</button>
-    </div>
-
-    </p-dialog>
+        <div>
+            <button id="incluir-atividade" type="submit" class="btn btn-primary">Registrar atividade</button>
+        </div>
+    </form>
+</p-dialog>
