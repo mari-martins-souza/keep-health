@@ -4,7 +4,7 @@
 
         <div id="nova-atividade">
             <label for="lista-exercicios">Escolha a modalidade:</label>
-            <select class="form-select" aria-label="Default select example" id="lista-exercicios">
+            <select #listaExercicios class="form-select" aria-label="Default select example" id="lista-exercicios">
                 <option>Corrida</option>
                 <option>Caminhada</option>
                 <option>Natação</option>
@@ -16,17 +16,19 @@
         </div>
         <div>
             <label for="data-atividade">Data em que foi realizada:</label>
-            <input type="date" id="data-atividade" class="form-control">
+            <input #dataAtividadeInput type="date" id="data-atividade" class="form-control">
         </div>
         <div>
             <label for="distancia">Distância (se aplicável):</label>
-            <input type="number" class="form-control" id="distancia" placeholder="em km">
+            <input type="number" #distanciaInput class="form-control" id="distancia" placeholder="em km">
         </div>
         <div>
             <label for="duracao">Duração da atividade (tempo):</label>
-            <input type="number" class="form-control" id="duracao" placeholder="em minutos">
+            <input type="number" #duracaoInput class="form-control" id="duracao" placeholder="em minutos">
         </div>
-
-        <button id="incluir-atividade" type="submit" class="btn btn-primary">Registrar atividade</button>
+    
+    <div>
+        <button (click)="incluirAtividade()" id="incluir-atividade" type="submit" class="btn btn-primary">Registrar atividade</button>
+    </div>
 
     </p-dialog>
