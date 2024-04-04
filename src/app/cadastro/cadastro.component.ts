@@ -53,7 +53,6 @@ export class CadastroComponent implements OnInit {
           altura: this.cadastroForm.value.altura,
           localizacao: this.cadastroForm.value.localizacao,
           nomeUsuario: this.cadastroForm.value.nomeUsuario,
-          
         }
         usuarios.push(usuario);
         localStorage.setItem('usuariosSalvos', JSON.stringify(usuarios));
