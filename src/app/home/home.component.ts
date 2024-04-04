@@ -1,19 +1,20 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { ExerciciosComponent } from '../exercicios/exercicios.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [RouterModule, ExerciciosComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-  nomeUsuario: string = '';
+ 
 
   constructor() {}
   
-  ngOnInit() {
-    this.nomeUsuario = localStorage.getItem('usuarioLogado') || '';
+  
   }
 
-}
+

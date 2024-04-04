@@ -17,6 +17,7 @@ export class ExerciciosComponent implements OnInit {
   visible: boolean = false;
   usuarioLogado!: string;
   listaAtividades: any = [];
+  nomeUsuario: string = '';
 
   showDialog() {
     this.visible = true;
@@ -30,6 +31,8 @@ export class ExerciciosComponent implements OnInit {
   });
 
   ngOnInit() {
+    this.nomeUsuario = localStorage.getItem('usuarioLogado') || '';
+    
     this.usuarioLogado = localStorage.getItem('usuarioLogado') || '';
 
     const atividadesSalvasDoUsuarioLogado = localStorage.getItem('atividadesSalvas-' + this.usuarioLogado);

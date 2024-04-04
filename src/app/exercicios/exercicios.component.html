@@ -1,42 +1,57 @@
 
-<h2>Registro de atividades físicas</h2>
-<p-button (click)="showDialog()" icon="pi pi-external-link" label="Nova atividade"></p-button>
-<p-dialog header="Registro de atividade física" [(visible)]="visible" [breakpoints]="{ '960px': '75vw' }" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false">
+<div class="container">
+    <div class="bemvindo">
+        <h2>Bem vindo(a), {{ nomeUsuario }}! Gostaria de adicionar um novo registro?</h2>
+        <div #botao>
+            <p-button class="btn-atividade" (click)="showDialog()" icon="pi pi-external-link" label="Nova Atividade"></p-button>
+        </div>
+    </div>
 
-    <form [formGroup]="novaAtividadeForm" (ngSubmit)="incluirAtividade()">    
-            <label for="lista-exercicios">Escolha a modalidade:</label>
-            <select class="form-select" aria-label="Default select example" id="lista-exercicios" formControlName="atividade">
-                <option>Corrida</option>
-                <option>Caminhada</option>
-                <option>Natação</option>
-                <option>Dança</option>
-                <option>Ciclismo</option>
-                <option>Surf</option>
-                <option>Musculação</option>
-            </select>
-        <div>
-            <label for="data-atividade">Data em que foi realizada:</label>
-            <input type="date" id="data-atividade" class="form-control" formControlName="data">
-        </div>
-        <div>
-            <label for="distancia">Distância (se aplicável):</label>
-            <input type="number" class="form-control" id="distancia" placeholder="em km" formControlName="distancia">
-        </div>
-        <div>
-            <label for="duracao">Duração da atividade (tempo):</label>
-            <input type="number" class="form-control" id="duracao" placeholder="em minutos" formControlName="duracao">
-        </div>
-        <div>
-            <button id="incluir-atividade" type="submit" class="btn btn-primary">Registrar atividade</button>
-        </div>
-    </form>
-</p-dialog>
+    <p-dialog class="caixa-dialogo" header="Registro de atividade física" [(visible)]="visible" [breakpoints]="{ '960px': '75vw' }" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false">
 
-<div class="container-atividades" *ngFor="let atividade of listaAtividades; let i = index">
-    <img [src]="'../../../assets/imagens/esportes/' + atividade.atividade + '.jpg'" width="200px">
-    <p> {{atividade.atividade}} </p>
-    <p> {{atividade.data}} </p>
-    <p> {{atividade.distancia}} </p>
-    <p> {{atividade.duracao}} </p>
-    <button (click)="removerAtividade(i)">Excluir</button>
+        <form [formGroup]="novaAtividadeForm" (ngSubmit)="incluirAtividade()">    
+                <label class="label-dialog" for="lista-exercicios">Escolha a modalidade:</label>
+                <select class="form-select" aria-label="Default select example" id="lista-exercicios" formControlName="atividade">
+                    <option>Corrida</option>
+                    <option>Caminhada</option>
+                    <option>Natação</option>
+                    <option>Dança</option>
+                    <option>Ciclismo</option>
+                    <option>Surf</option>
+                    <option>Musculação</option>
+                </select>
+            <div>
+                <label class="label-dialog" for="data-atividade">Data em que foi realizada:</label>
+                <input type="date" id="data-atividade" class="form-control" formControlName="data">
+            </div>
+            <div>
+                <label class="label-dialog" for="distancia">Distância (se aplicável):</label>
+                <input type="number" class="form-control" id="distancia" placeholder="em km" formControlName="distancia">
+            </div>
+            <div>
+                <label class="label-dialog" for="duracao">Duração da atividade (tempo):</label>
+                <input type="number" class="form-control" id="duracao" placeholder="em minutos" formControlName="duracao">
+            </div>
+            <div>
+                <button id="incluir-atividade" type="submit" class="btn btn-primary">Registrar atividade</button>
+            </div>
+        </form>
+    </p-dialog>
+
+    <div class="card-exercicios">
+        <div class="row">   
+            <div *ngFor="let atividade of listaAtividades; let i = index" class="col-lg-4 col-md-6">
+                <div class="card">
+                    <img class="card-img-top" [src]="'../../../assets/imagens/esportes/' + atividade.atividade + '.jpg'" width="200px">
+                    <div class="card-body">
+                        <h5 class="card-title"> {{atividade.atividade}} </h5>
+                        <p class="card-text"> Data: {{atividade.data}} </p>
+                        <p class="card-text"> Distância: {{atividade.distancia}} Km</p>
+                        <p class="card-text"> Duração: {{atividade.duracao}} minutos</p>
+                        <button class="btn-remove" (click)="removerAtividade(i)">Excluir</button>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>      
 </div>
