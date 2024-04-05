@@ -1,7 +1,11 @@
 <div class="container">
+  <header>
+    <h1 id="logomarca">Keep Health</h1>
+  </header>
+  <div id="login">
     <h2 id="titulo-login">Entrar</h2>
     <form (submit)="logar()">
-      <div class="form-group">
+      <div class="form-group" id="form-keephealth">
         <label for="nomeUsuario">Nome de usuário:</label>
         <input type="text" class="form-control" id="nomeUsuario" placeholder="Digite seu nome de usuário" name="nomeUsuario" [(ngModel)]="nomeUsuario" required>
       </div>
@@ -13,5 +17,6 @@
       <button id="entrar" type="submit" class="btn btn-primary">Entrar</button>
       <button id="criar-conta" type="button" class="btn btn-primary" [routerLink]="['/cadastro']">Criar conta</button>
     </form>
+  </div>
   </div>
   

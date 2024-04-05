@@ -1,4 +1,8 @@
 <div class="container">
+  <header>
+    <h1 id="logomarca">Keep Health</h1>
+  </header>
+  <div id="cadastro">
   <h2 id="titulo-cadastro">Faça seu cadastro</h2>
   <form [formGroup]="cadastroForm" (ngSubmit)="cadastrar()">
     <div class="form-group">
@@ -46,4 +50,5 @@
     <button id="cadastrar" type="submit" class="btn btn-primary">Cadastrar</button>
     <button id="voltar" type="button" class="btn btn-primary" [routerLink]="['']">Voltar</button>
   </form>
+</div>
 </div>
