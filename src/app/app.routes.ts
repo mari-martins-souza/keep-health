@@ -7,42 +7,29 @@ import { DietasComponent } from './dietas/dietas.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { DietasDetalhesComponent } from './dietas/dietas-detalhes/dietas-detalhes.component';
 import { authGuard } from '../shared/guards/auth.guard';
+import { authChildGuard } from '../shared/guards/auth-child.guard';
+import { Erro404Component } from './erro404/erro404.component';
 
 export const routes: Routes = [
-    {
-        path: '',
-        component: LoginComponent
-    },
+    { path: '', component: LoginComponent },
     
-    {   
-        path: 'cadastro',
-        component: CadastroComponent
-    },  
-    {
-        path: 'inicio',
-        component: HomeComponent,
-        canActivate: [authGuard]
-    },
-    {
-        path: 'esqueci-senha',
-        component: EsqueciSenhaComponent
-    },
-    {
-        path: 'perfil',
-        component: PerfilComponent,
-        canActivate: [authGuard]
-    },
-    { 
-        path: 'dietas', 
+    { path: 'cadastro', component: CadastroComponent },  
+
+    { path: 'inicio', component: HomeComponent, canActivate: [authGuard] },
+
+    { path: 'esqueci-senha', component: EsqueciSenhaComponent },
+
+    { path: 'perfil', component: PerfilComponent, canActivate: [authGuard] },
+
+    { path: 'dietas',
+            canActivateChild: [authChildGuard], 
             children: [
-            { 
-                path: '', component: DietasComponent, canActivate: [authGuard] 
-            },
-            { 
-                path: 'detalhes/:id', component: DietasDetalhesComponent, canActivate: [authGuard] 
-            },
+            { path: '', component: DietasComponent }, 
+            { path: 'detalhes/:id', component: DietasDetalhesComponent },
             ] 
     },
+
+    { path: 'alimento-nao-encontrado', component: Erro404Component }
 
 ];
 
