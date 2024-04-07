@@ -12,6 +12,6 @@ export const authChildGuard: CanActivateChildFn = (childRoute, state) => {
     return true;
   }
   
-  router.navigate(['']);
+  router.navigate(['alimento-nao-encontrado']);
   return false;
 };
