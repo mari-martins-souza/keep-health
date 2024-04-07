@@ -1,9 +1,11 @@
+@import '../../../assets/styles/variables';
+
 .logo {
     font-family: "Abril Fatface", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 1.5em;
-    color: #e22288;
+    font-size: 1.6em;
+    color: $colorLogomarca;
 }
 
 nav {
@@ -15,7 +17,7 @@ nav {
     padding-right: 1%;
     font-size: 1.2em;
     font-weight: 400;
-    background-color: black;
+    background-color: $colorNavbar;
   }
   
   .lista-menu {
@@ -25,12 +27,12 @@ nav {
   }
 
   .link-menu {
-    color: white;
+    color: $colorLinkNavbar;
     text-decoration: none;
   }
 
  .link-menu:hover {
-    color: #e22288;
+    color: $colorHoverLinkNavbar;
     transition: .3s;
   }
 
