@@ -6,6 +6,7 @@ import { EsqueciSenhaComponent } from './esqueci-senha/esqueci-senha.component';
 import { DietasComponent } from './dietas/dietas.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { DietasDetalhesComponent } from './dietas/dietas-detalhes/dietas-detalhes.component';
+import { authGuard } from '../shared/guards/auth.guard';
 
 export const routes: Routes = [
     {
@@ -19,7 +20,8 @@ export const routes: Routes = [
     },  
     {
         path: 'inicio',
-        component: HomeComponent
+        component: HomeComponent,
+        canActivate: [authGuard]
     },
     {
         path: 'esqueci-senha',
@@ -27,16 +29,17 @@ export const routes: Routes = [
     },
     {
         path: 'perfil',
-        component: PerfilComponent
+        component: PerfilComponent,
+        canActivate: [authGuard]
     },
     { 
         path: 'dietas', 
             children: [
             { 
-                path: '', component: DietasComponent 
+                path: '', component: DietasComponent, canActivate: [authGuard] 
             },
             { 
-                path: 'detalhes/:id', component: DietasDetalhesComponent 
+                path: 'detalhes/:id', component: DietasDetalhesComponent, canActivate: [authGuard] 
             },
             ] 
     },

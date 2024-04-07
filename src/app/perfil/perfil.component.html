@@ -1,4 +1,6 @@
+
 <div class="container" *ngIf="usuarioLogado">
+        <!-- <h2>Perfil do Usuário</h2> -->
         <p><strong>Nome de usuário: </strong>{{usuarioLogado.nomeUsuario}}</p>
         <p><strong>Nome: </strong> {{usuarioLogado.nome}}</p>
         <p><strong>e-mail: </strong> {{usuarioLogado.email}}</p>
@@ -6,7 +8,7 @@
         <p><strong>Altura: </strong>{{usuarioLogado.altura | conversorAltura}}</p>
         <p><strong>Idade: </strong>{{usuarioLogado.dataNascimento | conversorIdade}}</p>
         <p><strong>Cep: </strong>{{usuarioLogado.localizacao}}</p>  
-        <button id="cep" (click)="pesquisarCep()" class="btn btn-primary">Pesquisar Endereço</button>
+        <button id="cep" (click)="pesquisarCep()" class="btn btn-primary">Buscar Endereço</button>
         <div id="endereco-consultado">
                 <p>{{enderecoRetornado}}</p>
         </div>

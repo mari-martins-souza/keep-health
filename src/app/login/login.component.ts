@@ -14,6 +14,7 @@ import { NavbarService } from '../services/navbar.service';
 export class LoginComponent implements OnInit {
   nomeUsuario!: string;
   senha!: string;
+  
 
   constructor(private router: Router, private loginService: LoginService, private navbarService: NavbarService) { }
   
@@ -27,13 +28,10 @@ export class LoginComponent implements OnInit {
     this.navbarService.toggleNavbar(true);
   }
 
-  logar() {
-    if (this.loginService.autenticarUsuario(this.nomeUsuario, this.senha)) {
-      localStorage.setItem('usuarioLogado', this.nomeUsuario);
-      this.router.navigate(['/inicio']);
-    } else {
-      window.alert('Senha ou nome de usuário inválidos.')
-    }
+  loginButtonClick() {
+    this.loginService.logar(this.nomeUsuario, this.senha);
+
   }
+
 }
 
