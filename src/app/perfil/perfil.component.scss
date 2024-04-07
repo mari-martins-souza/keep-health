@@ -1,16 +1,18 @@
+@import '../../assets/styles/variables';
+
 .container {
     display: flex;
     flex-direction: column;
     align-items:flex-start;
     margin-top: 50px;
     padding: 15px;
-    background-color: rgba(0, 0, 0, 0.267);
+    background-color: $colorContainerLoginCadastro;
     width: fit-content;
     border-radius: 20px;
 }
 
 p {
-    color: white;
+    color: $colorTextCardDetalhe;
 }
 
 #endereco-consultado p {
@@ -19,11 +21,11 @@ p {
 }
 
 button {
-    background-color: black;
+    background-color: $colorBtn;
     border-style: none;
 }
 
 button:hover {
-    background-color: white ;
-    color: black;
+    background-color: $colorHoverBtn ;
+    color: $colorHoverText;
 }

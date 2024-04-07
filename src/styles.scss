@@ -1,6 +1,8 @@
+@import '../src/assets/styles/variables';
+
 html, body {
     margin: 0;
-    background-image: linear-gradient(to right, #4f4c8b, #e22288);
+    background-image: $colorBodyBackground;
 }
 
 
