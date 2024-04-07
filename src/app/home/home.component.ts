@@ -9,11 +9,9 @@ import { ExerciciosComponent } from '../exercicios/exercicios.component';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent {
- 
+export class HomeComponent  {
 
   constructor() {}
-  
   
   }
 

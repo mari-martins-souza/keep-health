@@ -11,6 +11,7 @@ export class HeaderComponent {
 
   limparUsuarioLogado() {
     localStorage.setItem('usuarioLogado', '');
+    localStorage.setItem('isLogged', 'false');
   }
 
 }

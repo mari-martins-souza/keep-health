@@ -32,7 +32,11 @@ export class PerfilComponent implements OnInit {
     const cep = this.usuarioLogado.localizacao;
        
       this.enderecoService.getCep(cep).subscribe(endereco => {
-        this.enderecoRetornado = `${endereco.logradouro}, ${endereco.bairro}, ${endereco.localidade} - ${endereco.uf}`;
+        this.enderecoRetornado = 
+        `${endereco.logradouro}, 
+        ${endereco.bairro}, 
+        ${endereco.localidade} - 
+        ${endereco.uf}`;
       });
     };
   }
