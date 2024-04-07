@@ -1,3 +1,5 @@
+@import '../../assets/styles/variables';
+
 .card-img-top {
     width: 300px;
     border-radius: 50%;
@@ -27,7 +29,7 @@
 .card {
     margin: auto;
     margin-bottom: 20px;
-    background-color: rgba(255, 255, 255, 0.342);
+    background-color: $colorBackgroundCard;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -38,7 +40,7 @@
 }
 
 .card:hover {
-    background-color: white;
+    background-color: $colorCardHover;
 }
 
 

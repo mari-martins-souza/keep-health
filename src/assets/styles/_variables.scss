@@ -1,2 +1,37 @@
-$colorHoverText: rgb(245, 209, 47);
-$colorTituloForms: rgb(255, 255, 255);
+$colorBodyBackground: linear-gradient(to right, #F7418F, #FFF3C7);
+$colorLogomarca: #FEC7B4;
+$colorNavbar: black;
+$colorLinkNavbar: white;
+$colorHoverLinkNavbar: #FEC7B4;
+$colorTitulosPaginas: black;
+
+// forms
+$colorHeaderLoginCadastro: black;
+$colorTituloForms: white;
+$colorLabelFormsGeral: white;
+$colorContainerLoginCadastro: rgba(0, 0, 0, 0.281);
+$colorTextDanger: yellow;
+
+//buttons
+$colorBtn: black;
+$colorHoverBtn: #FC819E;
+$colorHoverText: black;
+$colorBtnSecundario: transparent;
+
+//dialog
+$colorDialogBlackground: black;
+$colorDialogTitulo: #FEC7B4;
+$colorDialogBtn: #FEC7B4;
+$colorDialogBtnText: black;
+$colorDialogHoverBtn: #FC819E;
+
+//cards
+$colorCardText: black;
+$colorBackgroundCard: rgba(255, 255, 255, 0.445);
+$colorCardHover: white;
+$colorBtnRemove: rgba(0, 0, 0, 0.692);
+$colorBtnRemoveText: white;
+$colorBtnRemoveTextHover: #FEC7B4;
+$colorBackgroundCardDetalhe: rgba(0, 0, 0, 0.349);
+$colorTituloCardDetalhe: rgb(0, 0, 0);
+$colorTextCardDetalhe: rgb(255, 255, 255);

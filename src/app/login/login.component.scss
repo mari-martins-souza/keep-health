@@ -4,7 +4,7 @@
 
 #logomarca {
     font-family: "Abril Fatface", serif;
-    color: #e22288;
+    color: $colorLogomarca;
     text-align: center;
     padding-top: 20px;
 }
@@ -12,7 +12,7 @@
 header {
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: $colorHeaderLoginCadastro;
     padding-bottom: 20px;
     margin: auto;
     border-top-left-radius: 20px;
@@ -25,7 +25,7 @@ header {
 }
 
 label {
-    color: white;
+    color: $colorLabelFormsGeral;
 }
 
 .form-group {
@@ -33,18 +33,18 @@ label {
 }
 
 button {
-    background-color: black;
+    background-color: $colorBtn;
     border-style: none;
 }
 
 button:hover {
-    background-color: white ;
-    color: black;
+    background-color: $colorHoverBtn ;
+    color: $colorHoverText;
 }
 
 #esqueci-senha {
     text-decoration: none;
-    color: white;
+    color: $colorLabelFormsGeral;
 }
 
 #esqueci-senha:hover {
@@ -58,11 +58,11 @@ button:hover {
 #criar-conta {
     margin-left: 10px;
     margin-top: 15px;
-    background-color: transparent;
+    background-color: $colorBtnSecundario;
 }
 
 #criar-conta:hover {
-    background-color: rgba(255, 255, 255, 0.534);
+    background-color: $colorHoverBtn;
 }
 
 .container {
@@ -70,7 +70,7 @@ button:hover {
     border: 1px solid transparent;
     border-radius: 20px;
     padding: 0px;
-    background-color: rgba(0, 0, 0, 0.281);
+    background-color: $colorContainerLoginCadastro;
 }
 
 #login {

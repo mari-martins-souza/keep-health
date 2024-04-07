@@ -1,3 +1,5 @@
+@import '../../assets/styles/variables';
+
 #pesquisa {
     display: flex;
     justify-content: center;
@@ -17,29 +19,29 @@
 }
 
 button {
-    background-color: black;
+    background-color: $colorBtn;
     border-style: none;
 }
 
 button:hover {
-    background-color: white ;
-    color: black;
+    background-color: $colorHoverBtn ;
+    color: $colorHoverText;
 }
 
 #btn-limpar {
-    background-color: transparent;
+    background-color: $colorBtnSecundario;
     margin-bottom: 10px;
 }
 
 #btn-limpar:hover {
-    background-color: rgba(255, 255, 255, 0.534);
+    background-color: $colorHoverBtn;
 }
 
 #topo {
     text-align: center;
     margin-top: 50px;
     margin-bottom: 50px;
-    color: white;
+    color: $colorTitulosPaginas;
     padding-left: 20px;
     padding-right: 20px;
 }
